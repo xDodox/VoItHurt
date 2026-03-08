@@ -79,7 +79,7 @@ pub async fn check_app_update() -> Result<UpdateInfo, String> {
         .build().map_err(|e| e.to_string())?;
 
     let res: serde_json::Value = client
-        .get("https://api.github.com/repos/YOUR_USER/YOUR_REPO/releases/latest")
+        .get("https://api.github.com/repos/xDodox/VoltHurt/releases/latest")
         .send().await.map_err(|e| e.to_string())?
         .json().await.map_err(|e| e.to_string())?;
 
